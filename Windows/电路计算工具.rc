@@ -1,4 +1,4 @@
-// Microsoft Visual C++ generated resource script.
+//Microsoft Developer Studio generated resource script.
 //
 #include "resource.h"
 
@@ -13,11 +13,13 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文(简体，中国) resources
+// Chinese (P.R.C.) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 #pragma code_page(936)
+#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -25,18 +27,18 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE 
+1 TEXTINCLUDE MOVEABLE PURE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE 
+2 TEXTINCLUDE MOVEABLE PURE 
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE 
+3 TEXTINCLUDE MOVEABLE PURE 
 BEGIN
     "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
     "#define _AFX_NO_OLE_RESOURCES\r\n"
@@ -64,15 +66,15 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON                    "res\\电路计算工具.ico"
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\电路计算工具.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG 0, 0, 235, 55
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "关于 电路计算工具"
 FONT 9, "宋体"
 BEGIN
@@ -83,17 +85,21 @@ BEGIN
 END
 
 IDD_MY_DIALOG DIALOGEX 0, 0, 208, 98
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "硬件小白专用计算器  v0.1"
-FONT 14, "宋体", 0, 0, 0x1
+CAPTION "硬件小白专用计算器  v0.0.1"
+FONT 14, "宋体"
 BEGIN
     EDITTEXT        EDIT_DITONG_LVBO_DIANZU,5,25,96,12,ES_AUTOHSCROLL
-    COMBOBOX        COMBO_DITONG_LVBO_DIANZU,102,26,101,143,CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COMBO_DITONG_LVBO_DIANZU,102,26,101,143,CBS_DROPDOWNLIST | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
     EDITTEXT        EDIT_DITONG_LVBO_DIANRONG,5,52,96,12,ES_AUTOHSCROLL
-    COMBOBOX        COMBO_DITONG_LVBO_DIANRONG,102,53,101,143,CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COMBO_DITONG_LVBO_DIANRONG,102,53,101,143,
+                    CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
     EDITTEXT        EDIT_DITONG_LVBO_PINLV,5,80,96,12,ES_AUTOHSCROLL
-    COMBOBOX        COMBO_DITONG_LVBO_PINLV,102,81,101,143,CBS_DROPDOWNLIST | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COMBO_DITONG_LVBO_PINLV,102,81,101,143,CBS_DROPDOWNLIST | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
     DEFPUSHBUTTON   "计算结果",BTN_RESET_VALUE2,96,10,35,14
     PUSHBUTTON      "复位数值",BTN_RESET_VALUE,132,10,35,14
     PUSHBUTTON      "复位单位",BTN_RESET2,168,10,35,14
@@ -104,6 +110,7 @@ BEGIN
 END
 
 
+#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -126,13 +133,13 @@ BEGIN
     BEGIN
         BLOCK "080404B0"
         BEGIN
-            VALUE "FileDescription", "电路计算工具 Microsoft 基础类应用程序"
-            VALUE "FileVersion", "1, 0, 0, 1"
-            VALUE "InternalName", "电路计算工具"
-            VALUE "LegalCopyright", "版权所有 (C) 2025"
-            VALUE "OriginalFilename", "电路计算工具.EXE"
-            VALUE "ProductName", "电路计算工具 应用程序"
-            VALUE "ProductVersion", "1, 0, 0, 1"
+            VALUE "FileDescription", "电路计算工具 Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "电路计算工具\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2025\0"
+            VALUE "OriginalFilename", "电路计算工具.EXE\0"
+            VALUE "ProductName", "电路计算工具 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
         END
     END
     BLOCK "VarFileInfo"
@@ -141,6 +148,8 @@ BEGIN
     END
 END
 
+#endif    // !_MAC
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -148,7 +157,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO
+GUIDELINES DESIGNINFO MOVEABLE PURE 
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -174,12 +183,12 @@ END
 // String Table
 //
 
-STRINGTABLE
+STRINGTABLE DISCARDABLE 
 BEGIN
     IDS_ABOUTBOX            "关于 电路计算工具(&A)..."
 END
 
-#endif    // 中文(简体，中国) resources
+#endif    // Chinese (P.R.C.) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

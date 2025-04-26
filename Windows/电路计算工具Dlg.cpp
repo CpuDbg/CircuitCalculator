@@ -139,14 +139,16 @@ BOOL CMyDlg::OnInitDialog()
 	// TODO: Add extra initialization here
 
 	// µÕÕ®¬À≤®µÁ◊Ëµ•Œª
-	m_ComboDiTongLvBoDianZu.AddString("Œ¢≈∑ - ¶Ã¶∏ (Microohm)");
-	m_ComboDiTongLvBoDianZu.AddString("∫¡≈∑ - m¶∏  (Milliohm)");
-	m_ComboDiTongLvBoDianZu.AddString("≈∑ƒ∑ - ¶∏   (Ohm)");
-	m_ComboDiTongLvBoDianZu.AddString("«ß≈∑ - K¶∏  (Kiloohm)");
-	m_ComboDiTongLvBoDianZu.AddString("’◊≈∑ - M¶∏  (Megaohm)");
-	m_ComboDiTongLvBoDianZu.AddString("º™≈∑ - G¶∏  (Gigaohm)");
-	m_ComboDiTongLvBoDianZu.AddString("Ã´≈∑ - T¶∏  (Teraohm)");
-	m_ComboDiTongLvBoDianZu.SetCurSel(2);
+	m_ComboDiTongLvBoDianZu.AddString("∆§≈∑ - p¶∏ (Picoohm)");
+	m_ComboDiTongLvBoDianZu.AddString("ƒ…≈∑ - n¶∏ (Nanoohm)");
+	m_ComboDiTongLvBoDianZu.AddString("Œ¢≈∑ - ¶Ã¶∏(Microohm)");
+	m_ComboDiTongLvBoDianZu.AddString("∫¡≈∑ - m¶∏ (Milliohm)");
+	m_ComboDiTongLvBoDianZu.AddString("≈∑ƒ∑ - ¶∏  (Ohm)");
+	m_ComboDiTongLvBoDianZu.AddString("«ß≈∑ - K¶∏ (Kiloohm)");
+	m_ComboDiTongLvBoDianZu.AddString("’◊≈∑ - M¶∏ (Megaohm)");
+	m_ComboDiTongLvBoDianZu.AddString("º™≈∑ - G¶∏ (Gigaohm)");
+	m_ComboDiTongLvBoDianZu.AddString("Ã´≈∑ - T¶∏ (Teraohm)");
+	m_ComboDiTongLvBoDianZu.SetCurSel(4);
 
 	
 	// µÕÕ®¬À≤®µÁ»›µ•Œª
@@ -290,7 +292,7 @@ void CMyDlg::OnBnClickedResetValue()
 
 void CMyDlg::OnBnClickedReset2()
 {
-	m_ComboDiTongLvBoDianZu.SetCurSel(2);
+	m_ComboDiTongLvBoDianZu.SetCurSel(4);
 	m_ComboDiTongLvBoDianRong.SetCurSel(2);
 	m_ComboDiTongLvBoPinLv.SetCurSel(0);
 }
@@ -319,19 +321,23 @@ void CMyDlg::OnBnClickedResetValue2()
 	switch(m_ComboDiTongLvBoDianZu.GetCurSel())
 	{
 		// Œ¢≈∑ - ¶Ã¶∏ (Microohm)
-	case 0: {dDianZu = m_EditDiTongLvBoDianZu / 1000 / 1000;} break;
+	case 0: {dDianZu = m_EditDiTongLvBoDianZu / 1000 / 1000 / 1000 / 1000;} break;
+		// Œ¢≈∑ - ¶Ã¶∏ (Microohm)
+	case 1: {dDianZu = m_EditDiTongLvBoDianZu / 1000 / 1000 / 1000;} break;
+		// Œ¢≈∑ - ¶Ã¶∏ (Microohm)
+	case 2: {dDianZu = m_EditDiTongLvBoDianZu / 1000 / 1000;} break;
 		// ∫¡≈∑ - m¶∏  (Milliohm)
-	case 1: {dDianZu = m_EditDiTongLvBoDianZu / 1000;} break;
+	case 3: {dDianZu = m_EditDiTongLvBoDianZu / 1000;} break;
 		// ≈∑ƒ∑ - ¶∏   (Ohm)
-	case 2: {/*no do...*/dDianZu = m_EditDiTongLvBoDianZu;} break;
+	case 4: {/*no do...*/dDianZu = m_EditDiTongLvBoDianZu;} break;
 		// «ß≈∑ - K¶∏  (Kiloohm)
-	case 3: {dDianZu = m_EditDiTongLvBoDianZu * 1000;} break;
+	case 5: {dDianZu = m_EditDiTongLvBoDianZu * 1000;} break;
 		// ’◊≈∑ - M¶∏  (Megaohm)
-	case 4: {dDianZu = m_EditDiTongLvBoDianZu * 1000 * 1000;} break;
+	case 6: {dDianZu = m_EditDiTongLvBoDianZu * 1000 * 1000;} break;
 		// º™≈∑ - G¶∏  (Gigaohm)
-	case 5: {dDianZu = m_EditDiTongLvBoDianZu * 1000 * 1000 * 1000;} break;
+	case 7: {dDianZu = m_EditDiTongLvBoDianZu * 1000 * 1000 * 1000;} break;
 		// Ã´≈∑ - T¶∏  (Teraohm)
-	case 6: {dDianZu = m_EditDiTongLvBoDianZu * 1000 * 1000 * 1000 * 1000;} break;
+	case 8: {dDianZu = m_EditDiTongLvBoDianZu * 1000 * 1000 * 1000 * 1000;} break;
 	}
 
 	// µÁ»›
@@ -352,7 +358,7 @@ void CMyDlg::OnBnClickedResetValue2()
 	}
 
 	// Ωÿ÷π∆µ¬ 
-	switch(m_ComboDiTongLvBoDianRong.GetCurSel())
+	switch(m_ComboDiTongLvBoPinLv.GetCurSel())
 	{
 		// ∫’◊» - Hz  (hertz)
 	case 0: {dZuZhiPinLv = m_EditDiTongLvBoPinLv;} break;
@@ -478,6 +484,7 @@ void CMyDlg::OnBnClickedResetValue2()
 			if(dDianZu > dValue)
 			{
 				bCmp = 1;
+				dValue = 1000;
 			}
 			else
 			{
@@ -488,19 +495,21 @@ void CMyDlg::OnBnClickedResetValue2()
 			{
 				if(bCmp)
 				{
+					// Ωÿ÷π∆µ¬  « 106.10329539763 kHz  µÁ»› « 100nF, º∆À„µÁ◊Ë « 14.999999999999 ¶∏
+					// Ωÿ÷π∆µ¬  « 100 kHz  µÁ»› « 1nF, º∆À„µÁ◊Ë « 15.9 K¶∏
 					if(dDianZu < dValue)
 					{
-						m_ComboDiTongLvBoDianZu.SetCurSel(i);
+						m_ComboDiTongLvBoDianZu.SetCurSel(4+i);
 						break;
 					}
-					dValue *= 1000;
+//					dValue *= 1000;
 					dDianZu /= 1000;
 				}
 				else
 				{
 					if(dDianZu > dValue)
 					{
-						m_ComboDiTongLvBoDianZu.SetCurSel(i);
+						m_ComboDiTongLvBoDianZu.SetCurSel(4-i);
 						break;
 					}
 					dValue = 1;
