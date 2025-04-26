@@ -69,9 +69,6 @@ CMyDlg::CMyDlg(CWnd* pParent /*=NULL*/)
 	m_EditDiTongLvBoDianRong = 0.0;
 	m_EditDiTongLvBoDianZu = 0.0;
 	m_EditDiTongLvBoPinLv = 0.0;
-	m_EditGaoTongLvBoDianRong = 0.0;
-	m_EditGaoTongLvBoDianZu = 0.0;
-	m_EditGaoTongLvBoPinLv = 0.0;
 }
 
 void CMyDlg::DoDataExchange(CDataExchange* pDX)
@@ -83,15 +80,9 @@ void CMyDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, EDIT_DITONG_LVBO_DIANRONG, m_EditDiTongLvBoDianRong);
 	DDX_Text(pDX, EDIT_DITONG_LVBO_DIANZU, m_EditDiTongLvBoDianZu);
 	DDX_Text(pDX, EDIT_DITONG_LVBO_PINLV, m_EditDiTongLvBoPinLv);
-	DDX_Text(pDX, EDIT_GAOTONG_LVBO_DIANRONG, m_EditGaoTongLvBoDianRong);
-	DDX_Text(pDX, EDIT_GAOTONG_LVBO_DIANZU, m_EditGaoTongLvBoDianZu);
-	DDX_Text(pDX, EDIT_GAOTONG_LVBO_PINLV, m_EditGaoTongLvBoPinLv);
 	DDX_Control(pDX, COMBO_DITONG_LVBO_DIANRONG, m_ComboDiTongLvBoDianRong);
 	DDX_Control(pDX, COMBO_DITONG_LVBO_DIANZU, m_ComboDiTongLvBoDianZu);
 	DDX_Control(pDX, COMBO_DITONG_LVBO_PINLV, m_ComboDiTongLvBoPinLv);
-	DDX_Control(pDX, COMBO_GAOTONG_LVBO_DIANRONG, m_ComboGaoTongLvBoDianRong);
-	DDX_Control(pDX, COMBO_GAOTONG_LVBO_DIANZU, m_ComboGaoTongLvBoDianZu);
-	DDX_Control(pDX, COMBO_GAOTONG_LVBO_PINLV, m_ComboGaoTongLvBoPinLv);
 }
 
 BEGIN_MESSAGE_MAP(CMyDlg, CDialog)
@@ -157,15 +148,6 @@ BOOL CMyDlg::OnInitDialog()
 	m_ComboDiTongLvBoDianZu.AddString("Ì«Å· - T¦¸  (Teraohm)");
 	m_ComboDiTongLvBoDianZu.SetCurSel(2);
 
-	// ¸ßÍ¨ÂË²¨µç×èµ¥Î»
-	m_ComboGaoTongLvBoDianZu.AddString("Î¢Å· - ¦Ì¦¸ (Microohm)");
-	m_ComboGaoTongLvBoDianZu.AddString("ºÁÅ· - m¦¸  (Milliohm)");
-	m_ComboGaoTongLvBoDianZu.AddString("Å·Ä· - ¦¸   (Ohm)");
-	m_ComboGaoTongLvBoDianZu.AddString("Ç§Å· - K¦¸  (Kiloohm)");
-	m_ComboGaoTongLvBoDianZu.AddString("Õ×Å· - M¦¸  (Megaohm)");
-	m_ComboGaoTongLvBoDianZu.AddString("¼ªÅ· - G¦¸  (Gigaohm)");
-	m_ComboGaoTongLvBoDianZu.AddString("Ì«Å· - T¦¸  (Teraohm)");
-	m_ComboGaoTongLvBoDianZu.SetCurSel(2);
 	
 	// µÍÍ¨ÂË²¨µçÈÝµ¥Î»
 	m_ComboDiTongLvBoDianRong.AddString("·É·¨ - fF  (femtofarad)");
@@ -176,15 +158,6 @@ BOOL CMyDlg::OnInitDialog()
 	m_ComboDiTongLvBoDianRong.AddString("·¨À­ - F   (Farad)");
 	m_ComboDiTongLvBoDianRong.SetCurSel(2);
 
-	// ¸ßÍ¨ÂË²¨µçÈÝµ¥Î»
-	m_ComboGaoTongLvBoDianRong.AddString("·É·¨ - fF  (femtofarad)");
-	m_ComboGaoTongLvBoDianRong.AddString("Æ¤·¨ - pF  (picofarad)");
-	m_ComboGaoTongLvBoDianRong.AddString("ÄÉ·¨ - nF  (nanofarad)");
-	m_ComboGaoTongLvBoDianRong.AddString("Î¢·¨ - ¦ÌF (microfarad)");
-	m_ComboGaoTongLvBoDianRong.AddString("ºÁ·¨ - mF  (millifarad)");
-	m_ComboGaoTongLvBoDianRong.AddString("·¨À­ - F   (Farad)");
-	m_ComboGaoTongLvBoDianRong.SetCurSel(2);
-
 	// µÍÍ¨½ØÖ¹ÆµÂÊµ¥Î»
 	m_ComboDiTongLvBoPinLv.AddString("ºÕ×È - Hz  (hertz)");
 	m_ComboDiTongLvBoPinLv.AddString("Ç§ºÕ - kHz (kilohertz)");
@@ -194,16 +167,6 @@ BOOL CMyDlg::OnInitDialog()
 	m_ComboDiTongLvBoPinLv.AddString("ÅÄºÕ - PHz (petahertz)");
 	m_ComboDiTongLvBoPinLv.AddString("°¬ºÕ - EHz (exahertz)");
 	m_ComboDiTongLvBoPinLv.SetCurSel(0);
-
-	// ¸ßÍ¨½ØÖ¹ÆµÂÊµ¥Î»
-	m_ComboGaoTongLvBoPinLv.AddString("ºÕ×È - Hz  (hertz)");
-	m_ComboGaoTongLvBoPinLv.AddString("Ç§ºÕ - kHz (kilohertz)");
-	m_ComboGaoTongLvBoPinLv.AddString("Õ×ºÕ - MHz (megahertz)");
-	m_ComboGaoTongLvBoPinLv.AddString("¼ªºÕ - GHz (gigahertz)");
-	m_ComboGaoTongLvBoPinLv.AddString("Ì«ºÕ - THz (terahertz)");
-	m_ComboGaoTongLvBoPinLv.AddString("ÅÄºÕ - PHz (petahertz)");
-	m_ComboGaoTongLvBoPinLv.AddString("°¬ºÕ - EHz (exahertz)");
-	m_ComboGaoTongLvBoPinLv.SetCurSel(0);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }

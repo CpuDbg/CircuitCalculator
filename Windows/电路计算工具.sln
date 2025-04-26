@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "电路计算工具", "电路计算工具.vcxproj", "{470CC808-BB7E-72FF-974C-C8D7AC479ECC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "电路计算工具", "电路计算工具.vcxproj", "{49604A3E-0121-80AA-1957-0D03772ACBBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{470CC808-BB7E-72FF-974C-C8D7AC479ECC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{470CC808-BB7E-72FF-974C-C8D7AC479ECC}.Debug|Win32.Build.0 = Debug|Win32
-		{470CC808-BB7E-72FF-974C-C8D7AC479ECC}.Release|Win32.ActiveCfg = Release|Win32
-		{470CC808-BB7E-72FF-974C-C8D7AC479ECC}.Release|Win32.Build.0 = Release|Win32
+		{49604A3E-0121-80AA-1957-0D03772ACBBE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{49604A3E-0121-80AA-1957-0D03772ACBBE}.Debug|Win32.Build.0 = Debug|Win32
+		{49604A3E-0121-80AA-1957-0D03772ACBBE}.Release|Win32.ActiveCfg = Release|Win32
+		{49604A3E-0121-80AA-1957-0D03772ACBBE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

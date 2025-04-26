@@ -58,15 +58,9 @@ public:
 	double m_EditDiTongLvBoDianRong;
 	double m_EditDiTongLvBoDianZu;
 	double m_EditDiTongLvBoPinLv;
-	double m_EditGaoTongLvBoDianRong;
-	double m_EditGaoTongLvBoDianZu;
-	double m_EditGaoTongLvBoPinLv;
 	CComboBox m_ComboDiTongLvBoDianRong;
 	CComboBox m_ComboDiTongLvBoDianZu;
 	CComboBox m_ComboDiTongLvBoPinLv;
-	CComboBox m_ComboGaoTongLvBoDianRong;
-	CComboBox m_ComboGaoTongLvBoDianZu;
-	CComboBox m_ComboGaoTongLvBoPinLv;
 	afx_msg void OnBnClickedResetValue();
 	afx_msg void OnBnClickedReset2();
 	afx_msg void OnBnClickedResetValue2();
