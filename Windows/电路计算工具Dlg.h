@@ -48,22 +48,42 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
+	afx_msg void OnLrCalc();
+	afx_msg void OnLrResetValue();
+	afx_msg void OnLrReset();
+	afx_msg void OnRcCalc();
+	afx_msg void OnRcResetValue();
+	afx_msg void OnRcReset();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 public:
 	virtual BOOL PreTranslateMessage(MSG* pMsg);
+	
+	// RCÂË²¨
 	afx_msg void OnChangeEditDitongLvboDianrong();
 	afx_msg void OnEnChangeDitongLvboDianzu();
 	afx_msg void OnEnChangeDitongLvboPinlv();
+
 	double m_EditDiTongLvBoDianRong;
 	double m_EditDiTongLvBoDianZu;
 	double m_EditDiTongLvBoPinLv;
 	CComboBox m_ComboDiTongLvBoDianRong;
 	CComboBox m_ComboDiTongLvBoDianZu;
 	CComboBox m_ComboDiTongLvBoPinLv;
-	afx_msg void OnBnClickedResetValue();
-	afx_msg void OnBnClickedReset2();
-	afx_msg void OnBnClickedResetValue2();
+
+	//////////////////////////////////////////////////////////////////////////
+
+	// LRÂË²¨
+	afx_msg void OnChangeEditLRLvboDianGan();
+	afx_msg void OnEnChangeLRLvboDianzu();
+	afx_msg void OnEnChangeLRLvboPinlv();
+
+	double m_EditLRLvBoDianGan;
+	double m_EditLRLvBoDianZu;
+	double m_EditLRLvBoPinLv;
+	CComboBox m_ComboLRLvBoDianGan;
+	CComboBox m_ComboLRLvBoDianZu;
+	CComboBox m_ComboLRLvBoPinLv;
 };
 
 //{{AFX_INSERT_LOCATION}}

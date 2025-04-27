@@ -1,5 +1,5 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
+// Microsoft Developer Studio generated include file.
 // Used by 电路计算工具.rc
 //
 #define IDM_ABOUTBOX                    0x0010
@@ -11,17 +11,29 @@
 #define EDIT_DITONG_LVBO_DIANRONG       1001
 #define EDIT_DITONG_LVBO_PINLV          1002
 #define EDIT_GAOTONG_LVBO_DIANZU        1003
+#define EDIT_LR_LVBO_DIANZU             1003
 #define EDIT_GAOTONG_LVBO_DIANRONG      1004
+#define EDIT_LR_LVBO_DIANGAN            1004
 #define EDIT_GAOTONG_LVBO_PINLV         1005
+#define EDIT_LR_LVBO_PINLV              1005
 #define COMBO_DITONG_LVBO_DIANZU        1007
 #define COMBO_DITONG_LVBO_DIANRONG      1008
 #define COMBO_DITONG_LVBO_PINLV         1009
 #define COMBO_GAOTONG_LVBO_DIANZU       1010
+#define COMBO_LR_LVBO_DIANZU            1010
 #define COMBO_GAOTONG_LVBO_DIANRONG     1011
+#define COMBO_LR_LVBO_DIANGAN           1011
 #define COMBO_GAOTONG_LVBO_PINLV        1012
+#define COMBO_LR_LVBO_PINLV             1012
 #define BTN_RESET_VALUE                 1013
+#define BTN_RC_RESET_VALUE              1013
 #define BTN_RESET2                      1014
+#define BTN_RC_RESET                    1014
 #define BTN_RESET_VALUE2                1015
+#define BTN_RC_CALC                     1015
+#define BTN_LR_CALC                     1016
+#define BTN_LR_RESET_VALUE              1017
+#define BTN_LR_RESET                    1018
 
 // Next default values for new objects
 // 
